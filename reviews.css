@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+
+/* Navigation Styles */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;      /* pin to the left edge */
+  right: 0;     /* pin to the right edge */
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 1000;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links a.active:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+.signup-btn {
+  background: none;
+  border: 1px solid #333;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+  color: #333;
+}
+
+.language-selector {
+  display: flex;
+  gap: 5px;
+}
+
+.language-selector button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.language-selector button.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+main {
+  padding: 90px 20px 60px 20px;
+}
+
+.reviews-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.review-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.review-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review-text {
+  flex: 1;
+}
+
+.review-text p {
+  margin: 5px 0;
+}
+
+.review-rating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.stars {
+  color: #ffa500; /* orange/yellow stars */
+  letter-spacing: 2px;
+}
+
+.word-limit {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 10px;
+  color: gray;
+}
+
+
+/* The button*/
+/* Add Review Button Styles */
+.add-review-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.add-review-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-review-btn:hover {
+  background-color: #555;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.word-counter {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Star Rating */
+.star-rating {
+  font-size: 24px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.star-rating .star {
+  margin-right: 5px;
+}
+
+.star-rating .star.hover,
+.star-rating .star.active {
+  color: #ffa500;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+  .nav-right a {
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  color: #ccc; /* or any color you want */
+  text-decoration: none;
+}

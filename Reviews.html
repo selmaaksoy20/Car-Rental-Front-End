@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Reviews</title>
+  <link rel="stylesheet" href="reviews.css">
+  <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,sq',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="BookCar.html">Back</a>
+
+        </div>
+
+        <div class="nav-right">
+            <div class="language-selector" id="google_translate_element"></div>
+            <a href="my_profile.html" class="login-btn">Profile</a>
+            <a href="../HomePages/HomePage.html" class="signup-btn">Sign Out</a> <!--the signOut Page-->
+        </div>
+    </nav>
+
+  <!-- Reviews Section -->
+  <main>
+    <section class="reviews-section">
+
+      <!-- Review Card 1 -->
+      <div class="review-card">
+        <div class="review-content">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="avatar">
+          <div class="review-text">
+            <strong>John Doe</strong>
+            <p><strong><u>Tesla Model 3 - The car was great!</u></strong></p>
+            <p>“Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim”</p>
+          </div>
+        </div>
+        <div class="review-rating">
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="word-limit">Word limit: 45</p>
+      </div>
+
+      <!-- Review Card 2 -->
+      <div class="review-card">
+        <div class="review-content">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="avatar">
+          <div class="review-text">
+            <strong>John Doe</strong>
+            <p><strong><u>Toyota Corolla - The car was mediocre!</u></strong></p>
+            <p>“Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim”</p>
+          </div>
+        </div>
+        <div class="review-rating">
+          <div class="stars">★★★</div>
+        </div>
+        <p class="word-limit">Word limit: 45</p>
+      </div>
+
+      <!-- Review Card 3 -->
+      <div class="review-card">
+        <div class="review-content">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="avatar">
+          <div class="review-text">
+            <strong>John Doe</strong>
+            <p><strong><u>Toyota Corolla - The car was mediocre!</u></strong></p>
+            <p>“Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim”</p>
+          </div>
+        </div>
+        <div class="review-rating">
+          <div class="stars">★★</div>
+        </div>
+        <p class="word-limit">Word limit: 45</p>
+      </div>
+
+    </section>
+    <!-- Add Review Button -->
+<div class="add-review-container">
+  <button id="addReviewBtn" class="add-review-btn">Add Review</button>
+</div>
+
+<!-- Review Form Popup -->
+<div id="reviewFormPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Add Your Review</h2>
+    <form id="reviewForm">
+      <div class="form-group">
+        <label for="reviewerName">Your Name:</label>
+        <input type="text" id="reviewerName" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Car Model:</label>
+        <input type="text" id="carModel" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Rating:</label>
+        <div class="star-rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="ratingValue" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="reviewText">Your Review:</label>
+        <textarea id="reviewText" rows="5" required></textarea>
+        <div class="word-counter"><span id="wordCount">0</span>/45 words</div>
+      </div>
+      
+      <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+  </div>
+</div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Footer code if needed -->
+  </footer>
+
+  <script>
+  // Popup functionality
+  const addReviewBtn = document.getElementById('addReviewBtn');
+  const reviewFormPopup = document.getElementById('reviewFormPopup');
+  const closeBtn = document.querySelector('.close-btn');
+  const reviewForm = document.getElementById('reviewForm');
+  const stars = document.querySelectorAll('.star');
+  const ratingValue = document.getElementById('ratingValue');
+  const reviewText = document.getElementById('reviewText');
+  const wordCount = document.getElementById('wordCount');
+
+  // Open popup
+  addReviewBtn.addEventListener('click', () => {
+    reviewFormPopup.style.display = 'flex';
+  });
+
+  // Close popup
+  closeBtn.addEventListener('click', () => {
+    reviewFormPopup.style.display = 'none';
+  });
+
+  // Close when clicking outside
+  window.addEventListener('click', (e) => {
+    if (e.target === reviewFormPopup) {
+      reviewFormPopup.style.display = 'none';
+    }
+  });
+
+  // Star rating functionality
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const value = parseInt(star.getAttribute('data-value'));
+      ratingValue.value = value;
+      
+      stars.forEach((s, index) => {
+        if (index < value) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+    });
+
+    star.addEventListener('mouseover', () => {
+      const value = parseInt(star.getAttribute('data-value'));
+      
+      stars.forEach((s, index) => {
+        if (index < value) {
+          s.classList.add('hover');
+        } else {
+          s.classList.remove('hover');
+        }
+      });
+    });
+
+    star.addEventListener('mouseout', () => {
+      stars.forEach(s => {
+        s.classList.remove('hover');
+      });
+    });
+  });
+
+  // Word count functionality
+  reviewText.addEventListener('input', () => {
+    const text = reviewText.value.trim();
+    const words = text ? text.split(/\s+/) : [];
+    wordCount.textContent = words.length;
+    
+    // Enforce word limit
+    if (words.length > 45) {
+      const limitedText = words.slice(0, 45).join(' ');
+      reviewText.value = limitedText;
+      wordCount.textContent = 45;
+    }
+  });
+
+  // Form submission - adds review to page
+  reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('reviewerName').value;
+    const carModel = document.getElementById('carModel').value;
+    const rating = ratingValue.value;
+    const review = reviewText.value;
+    
+    // Create new review card
+    const reviewCard = document.createElement('div');
+    reviewCard.className = 'review-card';
+    
+    // Convert rating to stars
+    const starRating = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    
+    // Set the inner HTML of the new review card
+    reviewCard.innerHTML = `
+      <div class="review-content">
+        <img src="https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg" alt="User" class="avatar">
+        <div class="review-text">
+          <strong>${name}</strong>
+          <p><strong><u>${carModel}</u></strong></p>
+          <p>${review}</p>
+        </div>
+      </div>
+      <div class="review-rating">
+        <div class="stars">${starRating}</div>
+      </div>
+      <p class="word-limit">Word limit: 45</p>
+    `;
+    
+    // Insert the new review at the top of the reviews section
+    const reviewsSection = document.querySelector('.reviews-section');
+    reviewsSection.insertBefore(reviewCard, reviewsSection.firstChild);
+    
+    // Reset form and close popup
+    reviewForm.reset();
+    stars.forEach(star => star.classList.remove('active'));
+    ratingValue.value = '';
+    wordCount.textContent = '0';
+    reviewFormPopup.style.display = 'none';
+    
+    // Show success message
+    alert('Your review has been added!');
+  });
+</script>
+</body>
+</html>

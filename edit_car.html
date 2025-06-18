@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="edit_car.css">
+  <link rel="stylesheet" href="my_cars.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,sq',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="my_cars.html">Back</a>
+
+        </div>
+        <div class="nav-right">
+            <div class="language-selector" id="google_translate_element"></div>
+            <a href="../my_profile.html" class="login-btn">Profile</a>
+            <a href="../../HomePages/HomePage.html" class="signup-btn">Sign Out</a> <!--the signOut Page-->
+        </div>
+    </nav>
+
+  <div class="car-container">
+    <div class="car-card">
+      <div class="car-model">Tesla Model 3</div>
+      <div class="divider"></div>
+
+      <div class="car-info">
+          <input type="hidden" name="id"/>
+          
+          <div>
+            <span class="info-label">Type:</span>
+            <input type="text" name="type" value="Electric Sedan" required>
+          </div>
+          <div>
+            <span class="info-label">Transmission:</span>
+            <input type="text" name="transmission" value="Manual" required>
+          </div>
+          <div>
+            <span class="info-label">Fuel Type:</span>
+            <input type="text" name="fuel_type" value="Electric" required>
+          </div>
+          <div>
+            <span class="info-label">Seats:</span>
+            <input type="number" name="seats" value="5" required>
+          </div>
+          <div>
+            <span class="info-label">Air Conditioning:</span>
+            <input type="text" name="air_conditioning" value="Yes" required>
+          </div>
+          <div>
+            <span class="info-label">Fuel Policy:</span>
+            <input type="text" name="fuel_policy" value="Charge to 80%" required>
+          </div>
+          <div>
+            <span class="info-label">Mileage:</span>
+            <input type="text" name="mileage" value="300" required>
+        </div>
+          
+        <div class="save-btn">
+          <button type="submit" id="saveBtn">Save</button>
+        </div>
+               
+      </div>
+
+      <img src="images/v408_500.png" alt="Car Image" class="car-img">
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("saveBtn").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent form submission (if needed)
+      alert("Saved successfully!");
+    });
+  </script>
+  
+</body>
+</html>

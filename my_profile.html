@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Account</title>
+  <link rel="stylesheet" href="account.css" />
+  <link rel="stylesheet" href="car rental/header_footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+<!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../HomePages/HomePageC.html">Home</a>
+            <a href="../Client/BookCar.html">Rent</a>
+            <a href="../pictures/Guide/UserGuide.pdf" download="UserGuide.pdf">How It Works</a>
+            <a href="../OtherPages/visit.html">Places To Visit</a>
+            <a href="../HomePages/HomePageC.html#locations">Contact Us</a>
+            <a href="../OtherPages/FAQ.html">FAQ</a>
+
+        </div>
+
+        <div class="nav-right">
+            <div class="language-selector" id="google_translate_element"></div>
+            <a href="my_profile.html" class="login-btn">Profile</a>
+            <a href="../HomePages/HomePage.html" class="signup-btn">Sign Out</a> <!--the signOut Page-->
+        </div>
+    </nav>
+
+  <section class="top-container">
+    <a href="#profile-section" class="box">
+      <h3>Manage account</h3>
+      <div class="box-item">
+        <span>Edit details</span>
+        <span class="arrow">›</span>
+      </div>
+      <div class="box-item">
+        <span>Delete account</span>
+        <span class="arrow">›</span>
+      </div>
+            
+    </a>
+    <a href="car rental/my_cars.html" class="box">
+      <h3>Manage your cars</h3>
+      <div class="box-item">
+        <span>List your cars for rental</span>
+        <span class="arrow">›</span>
+      </div>
+    </a>
+    <div class="box points-box">
+      <h3>Your Points</h3>
+      <p> <span class="user-points"id="userPoints"><span class="star">★</span>100</span></p>
+    </div>
+    <a href="fav_cars.html" class="box">
+      <h3>Preferences</h3>
+      <div class="box-item">
+        <span>Saved cars</span>
+        <span class="arrow">›</span>
+      </div>
+    </a>
+    <a href="../HomePages/HomePageC.html#locations" class="box">
+      <h3>Help and support</h3>
+      <div class="box-item">
+        <span>Contact customer service</span>
+        <span class="arrow">›</span>
+      </div>
+    </a>
+
+    <a href="../OtherPages/FAQ.html" class="box">
+      <h3>FAQs</h3>
+      <div class="box-item">
+        <span>Frequently asked questions</span>
+        <span class="arrow">›</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="profile-section" class="profile-section">
+    <div class="profile-header">
+      <img src="car rental/images/user_avatar.png" alt="User" class="profile-img" />
+      <label class="upload-btn">
+        Upload Photo
+        <input type="file" accept="image/*" hidden onchange="previewPhoto(event)" />
+      </label>    </div>
+    <form class="profile-form" id="profileForm">
+      <label>Username</label>
+      <input type="text" name="username" value="Username" readonly />
+
+      <label>Password</label>
+<input type="password" name="password" id="passwordField" value="sbdfbnd65sdfvb s" readonly />
+<label><input type="checkbox" id="togglePassword" class="hidden"> Show Password</label>
+
+      
+      <label>Contact Number</label>
+      <input type="text" name="contact" value="+355697325734" readonly />
+
+      <label>Date of Birth</label>
+      <input type="text" name="dob" value="2001-05-15" readonly />
+
+      <div class="button-row">
+        <button type="button" id="editBtn" class="editBtn">Edit</button>
+        <button type="submit" id="saveBtn" class="save-btn hidden">Save</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- Left Side -->
+        <div class="footer-left">
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact Us</h3>
+
+                <div class="contact-item">
+                    <img src="../pictures/socials/location.png" alt="location">
+                    <p class="footer-text">Don Bosko, Tirone, Albania</p>
+                </div>
+
+                <div class="contact-item">
+                    <img src="../pictures/socials/phone.png" alt="phone">
+                    <p class="footer-text">+355 688388 890</p>
+                </div>
+
+                <div class="contact-item">
+                    <img src="../pictures/socials/email.png" alt="email">
+                    <p class="footer-text">remixie@gmail.com</p>
+                </div>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Social Media</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/carRental_Project1.22/"><img src="../pictures/socials/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/carRental_Project1.22/"><img src="../pictures/socials/instagram.png" alt="Instagram"></a>
+                    <a href="https://youtu.be/QB7ACr7pUuE?si=KPm87xwPaCjq7DUM"><img src="../pictures/socials/youtube.png" alt="Youtube"></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Side -->
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3 class="footer-heading">Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                    <li><a href="#">Investors</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Car Rental Company. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    const editBtn = document.getElementById("editBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const form = document.getElementById("profileForm");
+
+    editBtn.addEventListener("click", () => {
+  form.querySelectorAll("input").forEach(input => input.removeAttribute("readonly"));
+  editBtn.classList.add("hidden");
+  saveBtn.classList.remove("hidden");
+
+});
+
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      // Simulate saving to backend
+      alert("Saved successfully!");
+      form.querySelectorAll("input").forEach(input => input.setAttribute("readonly", true));
+      editBtn.classList.remove("hidden");
+      saveBtn.classList.add("hidden");
+    });
+    function previewPhoto(event) {
+  const img = document.querySelector(".profile-img");
+  img.src = URL.createObjectURL(event.target.files[0]);
+}
+document.getElementById("togglePassword").addEventListener("change", function() {
+  const pw = document.getElementById("passwordField");
+  pw.type = this.checked ? "text" : "password";
+});
+
+
+  </script>
+  <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,sq',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

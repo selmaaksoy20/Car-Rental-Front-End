@@ -1,0 +1,138 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+}
+
+.top-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* was 220px */
+  gap: 30px; /* more spacing */
+  padding: 10% 2% 5% 2%;
+}
+
+
+
+.box {
+  background-color: #E4EEC5;
+  border: 1px solid #e0e0e0;
+  padding: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+}
+
+.box-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.arrow{
+  text-align: center;
+}
+
+.points-box {
+  background-color: #FACB66;
+  color: white;
+  font-size: 120%;
+  text-align: center;
+}
+.user-points{
+  color: white;
+  font-size: 250%;
+}
+
+.points-box .star {
+  font-size: 100%;
+  vertical-align: middle;
+  color: #D36724;
+}
+
+.profile-section {
+  background-color: #E4EEC5;
+  padding: 50px 100px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.upload-btn {
+  padding: 6px 12px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-form {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.profile-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.button-row {
+  margin-top: 20px;
+}
+
+.button-row button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: right;
+}
+
+
+
+.save-btn {
+  background-color: #2a9d8f;
+  color: white;
+}
+.editBtn{
+  background-color: rgba(80,86,13,1);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Car</title>
+  <link rel="stylesheet" href="BookCar.css">
+
+  <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,sq',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../HomePages/HomePageC.html">Home</a>
+            <a href="BookCar.html">Rent</a>
+            <a href="../pictures/Guide/UserGuide.pdf" download="UserGuide.pdf">How It Works</a>
+            <a href="../OtherPages/visit.html">Places To Visit</a>
+            <a href="../HomePages/HomePageC.html#locations">Contact Us</a>
+            <a href="../OtherPages/FAQ.html">FAQ</a>
+
+        </div>
+
+        <div class="nav-right">
+            <div class="language-selector" id="google_translate_element"></div>
+            <a href="my_profile.html" class="login-btn">Profile</a>
+            <a href="../HomePages/HomePage.html" class="signup-btn">Sign Out</a> <!--the signOut Page-->
+        </div>
+    </nav>
+    <!-- Book Section-->
+    <section class="booking-section" style="padding-top: 100px;">
+    <div class="booking-container">
+
+        <!-- COLUMN 1: Location + Time -->
+        <div class="booking-form">
+            <div class="form-group">
+                <label for="location">Pick Up & Return Location</label><br>
+                <select id="location" name="location">
+                    <option value="">Select a location</option>
+                    <option value="Tirana">Tirana</option>
+                    <option value="Durres">Durres</option>
+                    <option value="Vlora">Vlora</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup-time">Pick Up Time</label><br>
+                <select id="pickup-time" name="pickup-time"></select>
+                <small><br>Minimum rental: 4 hours</small>
+            </div>
+
+            <div class="form-group">
+                <label for="return-time">Return Time</label><br>
+                <select id="return-time" name="return-time"></select>
+            </div>
+
+            <!-- Discount Info Moved under Return Time -->
+            <div class="reward-info">
+                <strong>!!Discount: 10% off for rentals of 7 days</strong><br>
+                <img src="../pictures/HPIcons/medal.png" alt="Medal Icon">
+                Earn 1 reward point for every $10 spent to win a discount!
+            </div>
+        </div>
+
+        <!-- COLUMN 2: Dates + Search -->
+        <div class="booking-calendars">
+            <div class="form-group">
+                <label for="pickup-date">Pick Up Date<br></label>
+                <input type="date" id="pickup-date" name="pickup-date" class="calendar-input" placeholder="Pick Up Date">
+            </div>
+
+            <div class="form-group">
+                <label for="return-date">Return Date<br></label>
+                <input type="date" id="return-date" name="return-date" class="calendar-input" placeholder="Return Date">
+                <div class="rental-limit-info">
+                    Maximum rental: 30 days
+                </div>
+            </div>
+
+            <!-- Search Button under Return Date -->
+            <div class="search-button-wrapper">
+                <button class="search-btn">
+                    <img src="../pictures/HPIcons/search.png" alt="Search Icon" class="search-icon">
+                    Search Available Vehicles
+                </button>
+            </div>
+        </div>
+
+        <!-- COLUMN 3: Trophy + Button -->
+        <div class="trophy-box">
+          <div class="trophy-card">
+              <img src="../pictures/HPIcons/Trophy.png" alt="Trophy" class="trophy-icon">
+              <div class="trophy-number">
+                  <h3>3</h3>
+              </div>
+          </div>
+
+            <button class="see-more-btn">See More</button>
+        </div>
+
+    </div>
+</section>
+
+<!--*car boxes*-->
+<main class="car-container" id="car-container">
+  <div class="car-card">
+    <div class="favorite-icon" onclick="toggleFavorite(this)">♥</div>
+    <img src="../pictures/mock/tesla.jpg" alt="Car Image" class="car-image">
+    <div class="car-info">
+      <div class="details-text">
+        <p><strong>Type:</strong> Sedan</p>
+        <p><strong>Transmission:</strong> Automatic</p>
+        <p><strong>Fuel Type:</strong> Petrol</p>
+        <p><strong>Seats:</strong> 5</p>
+        <p><strong>Air conditioning:</strong> Yes</p>
+        <p><strong>Fuel Policy:</strong> Full-to-Full</p>
+        <p><strong>Mileage:</strong> Unlimited</p>
+      </div>
+      <div class="car-actions">
+        <div class="action-btn price-btn">$55/day</div>
+        <a href="ViewCar.html" class="action-btn rent-btn">Rent Now</a>
+        <a href="Reviews.html" class="action-btn review-btn">Reviews</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="car-card">
+    <div class="favorite-icon" onclick="toggleFavorite(this)">♥</div>
+    <img src="../pictures/mock/tesla.jpg" alt="Car Image" class="car-image">
+    <div class="car-info">
+      <div class="details-text">
+        <p><strong>Type:</strong> Luxury Sedan</p>
+        <p><strong>Transmission:</strong> Automatic</p>
+        <p><strong>Fuel Type:</strong> Diesel</p>
+        <p><strong>Seats:</strong> 5</p>
+        <p><strong>Air conditioning:</strong> Yes</p>
+        <p><strong>Fuel Policy:</strong> Full-to-Full</p>
+        <p><strong>Mileage:</strong> Unlimited</p>
+      </div>
+      <div class="car-actions">
+        <div class="action-btn price-btn">$100/day</div>
+        <a href="ViewCar.html" class="action-btn rent-btn">Rent Now</a>
+        <a href="Reviews.html" class="action-btn review-btn">Reviews</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="car-card">
+    <div class="favorite-icon" onclick="toggleFavorite(this)">♥</div>
+    <img src="../pictures/mock/tesla.jpg" alt="Car Image" class="car-image">
+    <div class="car-info">
+      <div class="details-text">
+        <p><strong>Type:</strong> Mini</p>
+        <p><strong>Transmission:</strong> Automatic</p>
+        <p><strong>Fuel Type:</strong> Petrol</p>
+        <p><strong>Seats:</strong> 4</p>
+        <p><strong>Air conditioning:</strong> Yes</p>
+        <p><strong>Fuel Policy:</strong> Full-to-Full</p>
+        <p><strong>Mileage:</strong> 150km/day</p>
+      </div>
+      <div class="car-actions">
+        <div class="action-btn price-btn">$40/day</div>
+        <a href="ViewCar.html" class="action-btn rent-btn">Rent Now</a>
+        <a href="Reviews.html" class="action-btn review-btn">Reviews</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="car-card">
+    <div class="favorite-icon" onclick="toggleFavorite(this)">♥</div>
+    <img src="../pictures/mock/tesla.jpg" alt="Car Image" class="car-image">
+    <div class="car-info">
+      <div class="details-text">
+        <p><strong>Type:</strong> SUV</p>
+        <p><strong>Transmission:</strong> Automatic</p>
+        <p><strong>Fuel Type:</strong> Petrol</p>
+        <p><strong>Seats:</strong> 5</p>
+        <p><strong>Air conditioning:</strong> Yes</p>
+        <p><strong>Fuel Policy:</strong> Full-to-Full</p>
+        <p><strong>Mileage:</strong> Unlimited</p>
+      </div>
+      <div class="car-actions">
+        <div class="action-btn price-btn">$75/day</div>
+        <a href="ViewCar.html" class="action-btn rent-btn">Rent Now</a>
+        <a href="Reviews.html" class="action-btn review-btn">Reviews</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  function toggleFavorite(element) {
+    element.classList.toggle('favorited');
+  }
+</script>
+
+</body>
+</html>

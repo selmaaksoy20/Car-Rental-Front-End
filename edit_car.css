@@ -1,0 +1,33 @@
+
+  .car-info form div {
+    margin-bottom: 0px;
+  }
+
+  .car-info input {
+    padding: 5px 5px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    width: calc(100% - 170px);
+    font-size: 90%;
+  }
+
+  .save-btn button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  .save-btn{
+    text-decoration: none;
+  color: inherit;
+  grid-area: button;
+  background-color: #B2BA5A;
+  color: black;
+  font-size: 100%;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 5% 2% 1% 10%;
+  width: fit-content;
+  }

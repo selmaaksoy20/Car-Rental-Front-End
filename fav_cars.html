@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saved Cars & Reviews</title>
+  <link rel="stylesheet" href="fav_cars.css" />
+  <link rel="stylesheet" href="car rental/header_footer.css" />
+  <link rel="stylesheet" href="BookCar.css">
+  <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,sq',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="my_profile.html">Back</a>
+            <a href="fav_cars.html#saved-cars">Saved Cars</a>
+            <a href="fav_cars.html#my-reviews">My reviews</a>
+        </div>
+
+        <div class="nav-right">
+            <div class="language-selector" id="google_translate_element"></div>
+            <a href="my_profile.html" class="login-btn">Profile</a>
+            <a href="../HomePages/HomePage.html" class="signup-btn">Sign Out</a>
+        </div>
+    </nav>
+
+  <main>
+    <!-- Saved Cars Section -->
+    <section id="saved-cars">
+      <div class="car-card">
+        <h2>Toyota Corolla <span class="heart-icon">❤️</span></h2>
+        <img src="car rental/images/v408_533.png" alt="Toyota Corolla" />
+        <ul>
+          <li><strong>Type:</strong> Sedan</li>
+          <li><strong>Transmission:</strong> Automatic</li>
+          <li><strong>Fuel Type:</strong> Petrol</li>
+          <li><strong>Seats:</strong> 5</li>
+          <li><strong>Air conditioning:</strong> Yes</li>
+          <li><strong>Fuel Policy:</strong> Full-to-Full</li>
+          <li><strong>Mileage:</strong> Unlimited</li>
+        </ul>
+        <div class="price">$55/day</div>
+        <a href="ViewCar.html" class="action-btn rent-btn">Rent Now</a>
+      </div>
+
+      <div class="car-card">
+        <h2>BMW 3 Series <span class="heart-icon">❤️</span></h2>
+        <img src="car rental/images/v408_533.png" alt="BMW 3 Series" />
+        <ul>
+          <li><strong>Type:</strong> Luxury Sedan</li>
+          <li><strong>Transmission:</strong> Automatic</li>
+          <li><strong>Fuel Type:</strong> Diesel</li>
+          <li><strong>Seats:</strong> 5</li>
+          <li><strong>Air conditioning:</strong> Yes</li>
+          <li><strong>Fuel Policy:</strong> Full-to-Full</li>
+          <li><strong>Mileage:</strong> Unlimited</li>
+        </ul>
+        <div class="price">$100/day</div>
+        <a href="ViewCar.html" class="action-btn rent-btn">Rent Now</a>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="my-reviews" class="reviews-section">
+      <div class="review-card">
+        <div class="review-content">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="avatar">
+          <div class="review-text">
+            <strong>John Doe</strong>
+            <p><strong><u>Tesla Model 3 - The car was great!</u></strong></p>
+            <p>"Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim"</p>
+          </div>
+        </div>
+        <div class="review-rating">
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="review-buttons">
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <p class="word-limit">Word limit: 45</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-content">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="avatar">
+          <div class="review-text">
+            <strong>John Doe</strong>
+            <p><strong><u>Toyota Corolla - The car was mediocre!</u></strong></p>
+            <p>"Al dedi git dedi çocukların anasına dedi git dedi ben de adım gittim geldim"</p>
+          </div>
+        </div>
+        <div class="review-rating">
+          <div class="stars">★★★</div>
+        </div>
+        <div class="review-buttons">
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <p class="word-limit">Word limit: 45</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact Us</h3>
+                <div class="contact-item">
+                    <img src="../pictures/socials/location.png" alt="location">
+                    <p class="footer-text">Don Bosko, Tirone, Albania</p>
+                </div>
+                <div class="contact-item">
+                    <img src="../pictures/socials/phone.png" alt="phone">
+                    <p class="footer-text">+355 688388 890</p>
+                </div>
+                <div class="contact-item">
+                    <img src="../pictures/socials/email.png" alt="email">
+                    <p class="footer-text">remixie@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Social Media</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/carRental_Project1.22/"><img src="../pictures/socials/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/carRental_Project1.22/"><img src="../pictures/socials/instagram.png" alt="Instagram"></a>
+                    <a href="https://youtu.be/QB7ACr7pUuE?si=KPm87xwPaCjq7DUM"><img src="../pictures/socials/youtube.png" alt="Youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3 class="footer-heading">Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                    <li><a href="#">Investors</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Car Rental Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Edit Review Popup -->
+  <div id="editReviewPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>Edit Your Review</h2>
+      <form id="editReviewForm">
+        <div class="form-group">
+          <label for="editCarModel">Car Model:</label>
+          <input type="text" id="editCarModel" required>
+        </div>
+        <div class="form-group">
+          <label>Rating:</label>
+          <div class="star-rating">
+            <span class="edit-star" data-value="1">★</span>
+            <span class="edit-star" data-value="2">★</span>
+            <span class="edit-star" data-value="3">★</span>
+            <span class="edit-star" data-value="4">★</span>
+            <span class="edit-star" data-value="5">★</span>
+          </div>
+          <input type="hidden" id="editRatingValue" required>
+        </div>
+        <div class="form-group">
+          <label for="editReviewText">Your Review:</label>
+          <textarea id="editReviewText" rows="5" required></textarea>
+          <div class="word-counter"><span id="editWordCount">0</span>/45 words</div>
+        </div>
+        <button type="submit" class="submit-btn">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Favorite cars functionality
+    document.querySelectorAll('.heart-icon').forEach(heart => {
+      heart.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const carCard = heart.closest('.car-card');
+        carCard.remove();
+      });
+    });
+
+    // Review edit/delete functionality
+    document.querySelectorAll('.review-card').forEach(reviewCard => {
+      const deleteBtn = reviewCard.querySelector('.delete-btn');
+      const editBtn = reviewCard.querySelector('.edit-btn');
+      
+      // Delete functionality
+      deleteBtn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to delete this review?')) {
+          reviewCard.remove();
+        }
+      });
+      
+      // Edit functionality
+      editBtn.addEventListener('click', () => {
+        const popup = document.getElementById('editReviewPopup');
+        const reviewTitle = reviewCard.querySelector('.review-text strong:last-child').textContent;
+        const carModel = reviewTitle.split(' - ')[0];
+        const rating = reviewCard.querySelector('.stars').textContent.length;
+        const reviewText = reviewCard.querySelector('.review-text p:last-child').textContent;
+        
+        document.getElementById('editCarModel').value = carModel;
+        document.getElementById('editRatingValue').value = rating;
+        document.getElementById('editReviewText').value = reviewText.trim();
+        document.getElementById('editWordCount').textContent = reviewText.trim().split(/\s+/).length;
+        
+        // Set star rating
+        document.querySelectorAll('.edit-star').forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add('active');
+          } else {
+            star.classList.remove('active');
+          }
+        });
+        
+        popup.style.display = 'flex';
+        popup.currentReview = reviewCard;
+      });
+    });
+
+    // Edit popup functionality
+    const editReviewPopup = document.getElementById('editReviewPopup');
+    const editCloseBtn = editReviewPopup.querySelector('.close-btn');
+    const editReviewForm = document.getElementById('editReviewForm');
+    const editStars = document.querySelectorAll('.edit-star');
+    
+    // Close edit popup
+    editCloseBtn.addEventListener('click', () => {
+      editReviewPopup.style.display = 'none';
+    });
+    
+    // Close when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === editReviewPopup) {
+        editReviewPopup.style.display = 'none';
+      }
+    });
+    
+    // Edit star rating functionality
+    editStars.forEach(star => {
+      star.addEventListener('click', () => {
+        const value = parseInt(star.getAttribute('data-value'));
+        document.getElementById('editRatingValue').value = value;
+        
+        editStars.forEach((s, index) => {
+          if (index < value) {
+            s.classList.add('active');
+          } else {
+            s.classList.remove('active');
+          }
+        });
+      });
+    });
+    
+    // Edit form submission
+    editReviewForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const carModel = document.getElementById('editCarModel').value;
+      const rating = document.getElementById('editRatingValue').value;
+      const reviewText = document.getElementById('editReviewText').value;
+      
+      // Update the review card
+      const reviewCard = editReviewPopup.currentReview;
+      reviewCard.querySelector('.review-text strong:last-child').textContent = `${carModel} - ${carModel}`;
+      reviewCard.querySelector('.review-text p:last-child').textContent = reviewText;
+      reviewCard.querySelector('.stars').textContent = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+      
+      // Close popup
+      editReviewPopup.style.display = 'none';
+    });
+    
+    // Word count for edit form
+    document.getElementById('editReviewText').addEventListener('input', function() {
+      const text = this.value.trim();
+      const words = text ? text.split(/\s+/) : [];
+      document.getElementById('editWordCount').textContent = words.length;
+      
+      if (words.length > 45) {
+        const limitedText = words.slice(0, 45).join(' ');
+        this.value = limitedText;
+        document.getElementById('editWordCount').textContent = 45;
+      }
+    });
+  </script>
+</body>
+</html>

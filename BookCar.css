@@ -1,0 +1,487 @@
+
+/* Navigation Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  padding-top: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links a.active:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.signup-btn {
+  background: none;
+  border: 1px solid #333;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.language-selector {
+  display: flex;
+  gap: 5px;
+}
+
+.language-selector button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.language-selector button.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+a {
+  color: black;
+}
+  .nav-right a {
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  color: #ccc; /* or any color you want */
+  text-decoration: none;
+}
+
+/*Car Containers*/  
+  .car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+  .favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.favorite-icon.favorited {
+  color: red;
+}
+
+  .car-card {
+    position: relative; /* Required for heart positioning */
+    background-color: #f0f2cc;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .car-card h2 {
+    margin: 0;
+    font-size: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #999;
+  }
+  
+  .car-card img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    margin: 20px 0;
+  }
+  
+  .car-details {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .car-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    background-color: #d9dd9b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .rent-btn {
+    background-color: #9da44e;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .rent-btn:hover {
+    background-color: #8a9241;
+  }
+  
+/*Car Searching*/
+.booking-section {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.booking-container {
+    display: flex;
+    gap: 40px;
+    background: #dfe4a3;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.booking-form, .booking-calendars, .trophy-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content:flex-start;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, .calendar-input {
+    padding: 10px;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.calendar-input {
+    font-size: 16px;
+    height: 45px;
+}
+
+.search-btn, .see-more-btn {
+    padding: 10px;
+    background-color: #2b8426;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Ensure full width button */
+    height: 45px;
+    font-size: 16px;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-btn img {
+    width: 20px;
+    height: auto;
+}
+
+.search-btn:hover, .see-more-btn:hover {
+    background-color: #2b8426;
+}
+
+.trophy-card {
+    display: flex;
+    flex-direction: row; /* Change from column to row */
+    align-items: center;
+    background-color: #ffcb00;
+    padding: 10px 15px; /* Smaller padding */
+    border: 2px solid #ffcb00;
+    border-radius: 12px;
+    width: fit-content; /* Only as wide as content */
+    text-align: center;
+    gap: 10px; /* Space between icon and number */
+}
+
+.trophy-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0; /* Remove bottom margin */
+}
+
+.trophy-number h3 {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+}
+
+
+.trophy-card img {
+    width: 40px;
+    height: auto;
+}
+
+.trophy-number h3 {
+    font-size: 28px;
+    margin: 10px 0 0;
+    color: white;
+}
+
+.trophy-icon {
+    width: 40px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* General Layout and Alignment */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.reward-info {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-top: 20px;
+    white-space: nowrap; /* Prevent text wrapping */
+
+}
+
+.reward-info img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.rental-limit-info {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.search-button-wrapper {
+    margin-top: 20px; /* Ensure spacing before the search button */
+}
+
+/* Adjustments for Layout Flexbox */
+.booking-form, .booking-calendars {
+    width: 100%;
+}
+
+.booking-form {
+    max-width: 400px;
+}
+
+.booking-calendars {
+    max-width: 400px;
+}
+
+.trophy-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.car-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .price {
+    background-color: #d9dd9b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .car-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+  }
+  
+  .rent-btn, .review-btn {
+    background-color: #9da44e;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .rent-btn:hover, .review-btn:hover {
+    background-color: #8a9241;
+  }
+  .car-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .car-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .details-text {
+    width: 70%;
+  }
+  
+  .car-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+  }
+  
+  .action-btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .price-btn {
+    background-color: #6abf69; /* light green */
+  }
+  
+  .rent-btn {
+    background-color: #4caf50; /* medium green */
+    border: none;
+  }
+  
+  .review-btn {
+    background-color: #388e3c; /* dark green */
+    border: none;
+    cursor: pointer;
+  }
+  .car-card {
+  background-color: #f2f4d2;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.car-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.details-text {
+  width: 65%;
+  line-height: 1.6;
+}
+
+.car-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  width: 30%;
+}
+
+.action-btn {
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.price-btn {
+  background-color: #c9cd9b; /* light green */
+}
+
+.rent-btn {
+  background-color: #b2ba5a; /* medium green */
+  border: none;
+}
+
+.review-btn {
+  background-color: #777e23; /* dark green */
+  border: none;
+  cursor: pointer;
+}
