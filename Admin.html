@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="Admin.css" />
+</head>
+<body>
+  <div class="overlay">
+    <nav class="navbar">
+      <h1 class="welcome-text">Welcome Back!</h1>
+      <div class="nav-links">
+        <a href="../HomePages/HomePage.html">Logout</a>
+        <img src="../pictures/HPIcons/AdminIcon.png" alt="Profile" class="profile-pic" />
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <h2 class="section-title">Managers</h2>
+    <div class="table-container">
+      <table id="managerTable">
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>PHONE NUMBER</th>
+            <th>EMAIL</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Layan</td>
+            <td>Alateeq</td>
+            <td>0697864730</td>
+            <td><a href="mailto:LayanAlateeq@gmail.com">LayanAlateeq@gmail.com</a></td>
+            <td>
+              <a href="#" class="edit" onclick="openEditPopup()">Edit</a>
+              <a href="#" class="delete" onclick="openDeletePopup()">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Dea</td>
+            <td>Molla</td>
+            <td>06937438294</td>
+            <td><a href="mailto:deamolla@gmail.com">deamolla@gmail.com</a></td>
+            <td>
+              <a href="#" class="edit" onclick="openEditPopup()">Edit</a>
+              <a href="#" class="delete" onclick="openDeletePopup()">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="add-button" onclick="openAddPopup()">ADD NEW</button>
+    </div>    
+  </main>
+
+  <!-- Popups -->
+  <div class="overlay-bg" id="overlay" style="display: none;"></div>
+
+  <div class="popup" id="editPopup" style="display: none;">
+    <h3>Edit Manager</h3>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Surname">
+    <input type="text" placeholder="Phone">
+    <input type="email" placeholder="Email">
+    <div class="popup-buttons">
+      <button onclick="closePopup()">Cancel</button>
+      <button onclick="alert('Changes saved')">Save</button>
+    </div>
+  </div>
+
+  <div class="popup" id="deletePopup" style="display: none;">
+    <p>Are you sure you want to delete this manager?</p>
+    <div class="popup-buttons">
+      <button onclick="closePopup()">Cancel</button>
+      <button onclick="alert('Manager deleted')">Yes, Delete</button>
+    </div>
+  </div>
+
+  <div class="popup" id="addPopup" style="display: none;">
+    <h3>Add Manager</h3>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Surname">
+    <input type="text" placeholder="Phone">
+    <input type="email" placeholder="Email">
+    <div class="popup-buttons">
+      <button onclick="closePopup()">Cancel</button>
+      <button onclick="alert('Manager added')">Add</button>
+    </div>
+  </div>
+
+  <script>
+    function openEditPopup() {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("editPopup").style.display = "block";
+    }
+
+    function openDeletePopup() {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("deletePopup").style.display = "block";
+    }
+
+    function openAddPopup() {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("addPopup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("editPopup").style.display = "none";
+      document.getElementById("deletePopup").style.display = "none";
+      document.getElementById("addPopup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
