@@ -1,0 +1,91 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5dc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+
+}
+
+.left,
+.right {
+    width: 45%;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-top: 30px;
+}
+
+input,
+select {
+    width: 600px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+#car-image-preview {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.upload-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#car-image-upload {
+    display: none;
+}
+
+.add-button {
+    margin-bottom: 600px;
+    background-color: #b22222;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(12, 0, 0, 0.1);
+    cursor: pointer;
+    width: 53%;
+    height: 70px;
+}
+
+.price-input {
+    background-color: #c3c97d;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="manager.css" />
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,sq',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+  <div class="manager-page" data-model-id="424:262">
+    <div class="scale-wrapper">
+      <div class="div">
+
+        <nav class="navbar">
+          <div class="nav-links">
+            <a href="#profile" class="active">Profile</a>
+            <a href="#customers">Customers</a>
+            <a href="#cars">All Cars</a>
+            <a href="edit_visit.html">Places to Visit</a>
+
+          </div>
+
+
+          <div class="nav-right">
+            <div class="language-selector" id="google_translate_element"></div>
+
+            <a href="../HomePages/HomePage.html" class="signup-btn">Sign Out</a>
+            <!--the signOut Page-->
+          </div>
+        </nav>
+
+        <div class="group">
+          <div class="overlap-group">
+            <div class="frame-wrapper">
+              <div id="profile" class="profile-section">
+                <img id="profileImage" class="img" src="man.png" />
+                <input type="file" id="fileInput" accept="image/*" style="display: none" />
+                <!-- Styled Upload Button -->
+                <div class="div-wrapper" onclick="document.getElementById('fileInput').click();">
+                  <div class="text-wrapper-7">Upload Photo</div>
+                </div>
+              </div>
+              <div class="form-container">
+                <!-- First Row: Username and Password -->
+                <div class="firstname">
+                  <label class="label" for="username">Username</label>
+                  <input type="text" id="username" class="input-username editable" value="Username" readonly />
+                </div>
+
+                <div class="password">
+                  <label class="label" for="password">Password</label>
+                  <input type="password" id="password" class="input-password editable" value="sbdfbnd65sfdvb s"
+                    readonly />
+                </div>
+
+                <!-- Second Row: Email and Contact Number -->
+                <div class="email">
+                  <label class="label" for="email">Email</label>
+                  <input type="email" id="email" class="input-email editable" value="nsurname.business@gmail.com"
+                    readonly />
+                </div>
+
+                <div class="contact-number">
+                  <label class="label" for="phone">Contact Number</label>
+                  <input type="text" id="phone" class="input-phone editable" value="+355697325734" readonly />
+                </div>
+
+                <!-- Third Row: Date of Birth + Edit Button -->
+                <div class="date-of-birth">
+                  <label class="label" for="dob">Date of Birth</label>
+                  <div class="dob-wrapper">
+                    <input type="date" id="dob" class="input-dob editable" value="58077.79" readonly />
+                    <button class="edit-btn" id="edit-dob" onclick="toggleEditMode(this)">Edit</button>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div id="customers" class="overlap-6">
+          <div class="text-wrapper-18">CUSTOMERS</div>
+          <a href="addcostumer.html">
+            <button id="addCustomerBtn" class="action-btn add">Add Customer</button></a>
+        </div>
+        <!-- CUSTOMER MANAGEMENT SECTION -->
+        <div class="overlap-9">
+          <!-- Header Row -->
+          <div class="customer-header">
+            <div class="column name">Name</div>
+            <div class="column surname">Surname</div>
+            <div class="column email">Email</div>
+            <div class="column phone">Phone No.</div>
+            <div class="column actions">Actions</div>
+          </div>
+
+          <!-- Customer Rows Container -->
+          <div id="customersContainer">
+            <!-- Customer Row -->
+            <div class="customer-row">
+              <input class="column name" value="Selma" />
+              <input class="column surname" value="Aksoy" />
+              <input class="column email" value="s@gmail.com" />
+              <input class="column phone" value="+355629424" />
+
+              <!-- Actions -->
+              <div class="column actions">
+                <button class="action-btn edit">EDIT</button>
+                <button class="action-btn delete">DELETE</button>
+
+                <!-- Delete Modal -->
+                <div class="modal-container" id="deleteModal" style="display: none;">
+                  <div class="modal-box">
+                    <div class="modal-question">Are you sure you want to delete?</div>
+                    <div class="modal-buttons">
+                      <button class="cancel-btn" id="cancelBtn">Cancel</button>
+                      <button class="delete-btn" id="confirmDeleteBtn">Yes, Delete</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Block Button -->
+                <button class="action-btn block" id="blockBtn">BLOCK</button>
+
+                <!-- Block Modal -->
+                <div class="modal-container" id="blockModal" style="display: none;">
+                  <div class="modal-box">
+                    <p class="modal-question">Are you sure you want to block this customer?</p>
+                    <div class="modal-buttons">
+                      <button class="cancel-btn" id="cancelBlockBtn">CANCEL</button>
+                      <button class="block-btn" id="blockActionBtn">BLOCK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SEE ALL CARS SECTION -->
+        <div id="cars" class="overlap-7">
+          <div class="text-wrapper-19">SEE ALL CARS</div>
+
+          <div class="overlap-8">
+            <div class="rectangle-4"></div>
+            <a href="addcar.html">
+              <div class="text-wrapper-20">Add New Car</div>
+            </a>
+          </div>
+
+          <!-- Car Card Mock -->
+          <div class="car-container">
+            <div class="car-card">
+              <div class="car-name">Toyota Corolla</div>
+              <img class="car-image" src="day-exterior-4.png" alt="Toyota Corolla" />
+              <div class="car-info">
+                <div><span>Type:</span> Sedan</div>
+                <div><span>Transmission:</span> Automatic</div>
+                <div><span>Fuel Type:</span> Petrol</div>
+                <div><span>Seats:</span> 5</div>
+                <div><span>Air Conditioning:</span> Yes</div>
+                <div><span>Fuel Policy:</span> Full-to-Full</div>
+                <div><span>Mileage:</span> Unlimited</div>
+              </div>
+              <div class="button-container">
+                <button class="edit1-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </div>
+            </div>
+          </div>
+          <!-- Inside each .car-card -->
+          <div class="modal-container editCarModal" style="display: none;">
+            <div class="modal-box">
+              <div class="modal-question">Edit Car Details</div>
+              <div class="modal-fields">
+                <div class="modal-field">
+                  <span>Car Name:</span>
+                  <input type="text" class="editCarName">
+                </div>
+                <div class="modal-field">
+                  <span>Type:</span>
+                  <input type="text" class="editType">
+                </div>
+                <div class="modal-field">
+                  <span>Transmission:</span>
+                  <input type="text" class="editTransmission">
+                </div>
+                <div class="modal-field">
+                  <span>Fuel Type:</span>
+                  <input type="text" class="editFuelType">
+                </div>
+                <div class="modal-field">
+                  <span>Seats:</span>
+                  <input type="text" class="editSeats">
+                </div>
+              </div>
+              <div class="modal-buttons">
+                <button class="cancel-btn cancelEditBtn">Cancel</button>
+                <button class="save-btn saveCarBtn">Save</button>
+              </div>
+            </div>
+          </div>
+
+          <script src="functions.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+<script>
+  function toggleEditMode(button) {
+    const inputs = document.querySelectorAll('.editable');
+    const isEditing = button.textContent === 'Edit';
+
+    inputs.forEach(input => {
+      input.readOnly = !isEditing;
+    });
+
+    button.textContent = isEditing ? 'Save' : 'Edit';
+    button.classList.toggle('edit-btn', !isEditing);
+    button.classList.toggle('save-btn', isEditing);
+  }
+  document.getElementById('fileInput').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        // Just display the image temporarily (will be handled by backend later)
+        document.getElementById('profileImage').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+  // Customer Management - Frontend Only
+  const customersContainer = document.getElementById('customersContainer');
+
+  function setupCustomerActions() {
+    // Edit/Save buttons
+    document.querySelectorAll('.edit').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+        const inputs = row.querySelectorAll('input');
+
+        if (this.textContent === 'EDIT') {
+          inputs.forEach(input => input.readOnly = false);
+          this.textContent = 'SAVE';
+        } else {
+          inputs.forEach(input => input.readOnly = true);
+          this.textContent = 'EDIT';
+          // In a frontend-only implementation, we're not saving anywhere
+        }
+      });
+    });
+
+    // Delete buttons
+    document.querySelectorAll('.delete').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+        const deleteModal = row.querySelector('#deleteModal');
+        deleteModal.style.display = 'flex';
+      });
+    });
+
+    // Confirm delete buttons
+    document.querySelectorAll('#confirmDeleteBtn').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+        const deleteModal = row.querySelector('#deleteModal');
+
+        // Remove the row from the DOM
+        row.remove();
+        deleteModal.style.display = 'none';
+      });
+    });
+
+    // Cancel delete buttons
+    document.querySelectorAll('#cancelBtn').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+        const deleteModal = row.querySelector('#deleteModal');
+        deleteModal.style.display = 'none';
+      });
+    });
+
+    // Block buttons
+    document.querySelectorAll('.block').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+
+        // If unblocking, just toggle without showing modal
+        if (this.textContent === 'UNBLOCK') {
+          row.style.backgroundColor = '';
+          this.textContent = 'BLOCK';
+          return;  // Exit early, no modal needed
+        }
+
+        // Only show modal for blocking action
+        const blockModal = row.querySelector('#blockModal');
+        blockModal.style.display = 'flex';
+      });
+    });
+
+    // Confirm block buttons
+    document.querySelectorAll('#blockActionBtn').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+        const blockModal = row.querySelector('#blockModal');
+        const blockButton = row.querySelector('.block');
+
+        row.style.backgroundColor = '#f0ad4e';
+        blockButton.textContent = 'UNBLOCK';
+        blockModal.style.display = 'none';
+      });
+    });
+
+    // Cancel block buttons
+    document.querySelectorAll('#cancelBlockBtn').forEach(button => {
+      button.addEventListener('click', function () {
+        const row = this.closest('.customer-row');
+        const blockModal = row.querySelector('#blockModal');
+        blockModal.style.display = 'none';
+      });
+    });
+  }
+
+  // Initial setup
+  setupCustomerActions();
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Edit/Save functionality
+    document.querySelectorAll('.edit1-btn').forEach(button => {
+      button.addEventListener('click', handleEditSave);
+    });
+
+    // Delete functionality
+    document.querySelectorAll('.delete-btn').forEach(button => {
+      button.addEventListener('click', handleDelete);
+    });
+
+    function handleEditSave() {
+      const carCard = this.closest('.car-card');
+
+      if (this.textContent === 'Edit') {
+        // Enter edit mode
+        enableCarEditing(carCard);
+        this.textContent = 'Save';
+        carCard.classList.add('editing');
+      } else {
+        // Save changes and exit edit mode
+        saveCarChanges(carCard);
+        this.textContent = 'Edit';
+        carCard.classList.remove('editing');
+      }
+    }
+
+    function handleDelete() {
+      const carCard = this.closest('.car-card');
+      if (confirm('Are you sure you want to delete this car?')) {
+        carCard.remove();
+      }
+    }
+
+    function enableCarEditing(carCard) {
+      const carName = carCard.querySelector('.car-name');
+      const carInfoItems = carCard.querySelectorAll('.car-info div');
+
+      // Convert car name to input
+      const nameInput = document.createElement('input');
+      nameInput.type = 'text';
+      nameInput.value = carName.textContent;
+      nameInput.className = 'edit-input';
+      carName.innerHTML = '';
+      carName.appendChild(nameInput);
+
+      // Convert each info item to input
+      carInfoItems.forEach(item => {
+        const span = item.querySelector('span');
+        const label = span.textContent;
+        const value = item.textContent.replace(label, '').trim();
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = value;
+        input.className = 'edit-input';
+
+        item.innerHTML = `<span>${label}</span>`;
+        item.appendChild(input);
+      });
+    }
+
+    function saveCarChanges(carCard) {
+      const carName = carCard.querySelector('.car-name');
+      const nameInput = carName.querySelector('input');
+      carName.textContent = nameInput.value;
+
+      const carInfoItems = carCard.querySelectorAll('.car-info div');
+      carInfoItems.forEach(item => {
+        const span = item.querySelector('span');
+        const label = span.textContent;
+        const input = item.querySelector('input');
+        const value = input.value;
+
+        // Create new span to ensure clean state
+        const newSpan = document.createElement('span');
+        newSpan.textContent = label;
+
+        item.innerHTML = '';
+        item.appendChild(newSpan);
+        item.append(` ${value}`);
+      });
+    }
+  });
+</script>

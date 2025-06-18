@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fcd9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+  .nav-right a {
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  color: #ccc; /* or any color you want */
+  text-decoration: none;
+}
+
+/* Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    padding-top: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+a {
+    color: black;
+}
+
+
+.nav-links a.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 100px;
+    color: black;
+}
+
+.login-btn {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.signup-btn {
+    background: none;
+    border: 1px solid #333;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.language-selector {
+    display: flex;
+    gap: 5px;
+}
+
+.language-selector button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.language-selector button.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*FAQ section*/
+.faq-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #204d0f;
+}
+
+.faq-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.faq-left, .faq-right {
+    width: 48%;
+}
+
+.search-bar {
+    display: block;
+    margin: 0 auto 20px auto; /* Auto left & right centers it */
+    padding: 14px;
+    width: 90%; /* Adjust as needed */
+    max-width: 500px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.question-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+.ask-title {
+    background-color: #b2bb72;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+.question-form {
+    background-color: #b2bb72;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.question-form label {
+    color: white;
+    font-weight: bold;
+}
+
+.question-form input,
+.question-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: none;
+}
+
+.submit-btn {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: #5b5b2f;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.question-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px; /* Increased padding */
+    font-size: 30px; /* Slightly larger font */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 90%; /* Ensure full width */
+    min-height: 100px; /* Taller boxes */
+    margin: 2px auto 0 auto;
+}
+
+.question-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    min-height: 300px; /* Taller textarea */
+    width: 95%; /* Full width of container */
+    resize: vertical; /* Allow user to expand */
+}
+
+/*ANSWER QUESTION CSS*/
+.popup-answer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+}
+
+.popup-answer button {
+  margin-top: 10px;
+  background-color: #d33;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.overlay-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 9998;
+  display: none;
+}

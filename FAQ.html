@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ</title>
+  <link rel="stylesheet" href="FAQ.css">
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,sq',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const heading = document.getElementById("heading").value.trim();
+      const question = document.getElementById("question").value.trim();
+      if (heading === "" || question === "") {
+        alert("Please fill in both heading and question.");
+        return;
+      }
+      window.location.href = "../HomePages/HomePageC.html";
+    }
+
+    function showPopup(answer) {
+      document.getElementById('popupText').innerText = answer;
+      document.querySelector('.popup-answer').style.display = 'block';
+      document.querySelector('.overlay-bg').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.querySelector('.popup-answer').style.display = 'none';
+      document.querySelector('.overlay-bg').style.display = 'none';
+    }
+
+    function filterQuestions() {
+      const input = document.querySelector('.search-bar').value.toLowerCase();
+      const buttons = document.querySelectorAll('.question-button');
+      let anyVisible = false;
+
+      buttons.forEach(button => {
+        const text = button.textContent.toLowerCase();
+        if (text.includes(input)) {
+          button.style.display = 'block';
+          anyVisible = true;
+        } else {
+          button.style.display = 'none';
+        }
+      });
+
+      const noMatchMessage = document.getElementById('noMatchMessage');
+      if (!anyVisible) {
+        noMatchMessage.style.display = 'block';
+      } else {
+        noMatchMessage.style.display = 'none';
+      }
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+  <!-- Overlay for popup -->
+  <div class="overlay-bg" onclick="closePopup()"></div>
+  <div class="popup-answer" style="display: none;">
+    <p id="popupText"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="../HomePages/HomePageC.html">Home</a>
+      <a href="../Client/BookCar.html">Rent</a>
+      <a href="../pictures/Guide/UserGuide.pdf" download="UserGuide.pdf">How It Works</a>
+      <a href="../OtherPages/visit.html">Places To Visit</a>
+      <a href="../HomePages/HomePageC.html#locations">Contact Us</a>
+      <a href="FAQ.html">FAQ</a>
+    </div>
+
+    <div class="nav-right">
+      <div class="language-selector" id="google_translate_element"></div>
+      <a href="../Client/my_profile.html" class="login-btn">Profile</a>
+      <a href="../HomePages/HomePage.html" class="signup-btn">Sign Out</a>
+    </div>
+  </nav>
+
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-content">
+      <div class="faq-left">
+        <input type="text" placeholder="Search for your question..." class="search-bar" oninput="filterQuestions()">
+        <div class="question-list">
+          <button class="question-button" onclick="showPopup('You need a valid driver\'s license, a credit card, and must meet the age requirement.')">
+            What do I need to rent a car?
+          </button>
+          <button class="question-button" onclick="showPopup('No hidden fees. All costs are clearly explained during the booking process.')">
+            Are there any hidden fees?
+          </button>
+          <button class="question-button" onclick="showPopup('Yes, we do offer electric vehicles including Tesla models.')">
+            Do you offer electric vehicles like Tesla?
+          </button>
+          <button class="question-button" onclick="showPopup('Late returns may result in additional charges. Refer to the rental policy.')">
+            What happens if I return the car late?
+          </button>
+          <p id="noMatchMessage" style="margin-left:10px; display:none;">No matching questions found.</p>
+        </div>
+      </div>
+
+      <div class="faq-right">
+        <button class="ask-title">ASK A QUESTION:</button>
+        <form class="question-form" onsubmit="handleSubmit(event)">
+          <label for="heading">Heading :</label>
+          <input type="text" id="heading" name="heading" placeholder="type your heading...">
+          <label for="question">Question:</label>
+          <textarea id="question" name="question" placeholder="Enter your question..."></textarea>
+          <button type="submit" class="submit-btn">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

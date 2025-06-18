@@ -1,0 +1,175 @@
+/* Admin Page - Red Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Perfect 50/50 Split */
+.left-section,
+.right-section {
+    width: 50%;
+    height: 100%;
+}
+
+/* Left Section - Form */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.left-section h1 {
+    color: #f8d016;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.left-section p {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    position: relative;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-left: 4px solid #f8d016;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-left-width: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.input-label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #777;
+    background: white;
+    padding: 0 5px;
+    transition: all 0.3s;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.8rem;
+    color: #f8d016;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    justify-content: space-between;
+}
+.button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.login-btn {
+    background-color: #f8d016;
+    color: white;
+}
+.signup-btn {
+    background-color: white;
+    color: #f8d016;
+    border: 1px solid #f8d016;
+}
+
+/* Right Section - Navigation */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 0;
+    font-size: 1.2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    padding-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.nav a:hover {
+    color: #f8d016;
+}
+
+.nav a.active {
+    color: #f8d016;
+    border-bottom: 3px solid #f8d016;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+    }
+    
+    .left-section,
+    .right-section {
+        width: 100%;
+        height: auto;
+    }
+    
+    .left-section {
+        padding: 40px 20px;
+    }
+    
+    .nav {
+        gap: 30px;
+        padding: 20px 0;
+    }
+}

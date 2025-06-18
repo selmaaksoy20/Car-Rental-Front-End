@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Login</title>
+    <link rel="stylesheet" href="LoginC.css">
+</head>
+<body>
+    <div class="left-section">
+        <h1>Welcome!</h1>
+        <p>Welcome back, please login to your account</p>
+        
+        <div class="input-container">
+            <input type="text" id="username" class="input-field" placeholder=" " required>
+            <label for="username" class="input-label">Username</label>
+        </div>
+        
+        <div class="input-container">
+            <input type="password" id="password" class="input-field" placeholder=" " required>
+            <label for="password" class="input-label">Password</label>
+        </div>
+        
+        <div class="button-container">
+            <button class="button login-btn">Login</button>
+            <button class="button signup-btn" onclick="window.location.href='SignInC.html';">Sign Up</button>
+            </div>
+    </div>
+    
+    <div class="right-section">
+        <div class="nav">
+            <a href="LoginC.html" class="active">Client</a>
+            <a href="LoginM.html">Manager</a>
+            <a href="LoginA.html">Admin</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="../HomePages/HomePage.html">Home</a>
+
+        </div>
+        <div class="image-container">
+            <img src="../pictures/login/yellowLogin.png" alt="Yellow Car">
+        </div>
+    </div>
+</body>
+</html>

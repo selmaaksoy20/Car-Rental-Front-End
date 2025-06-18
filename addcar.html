@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="addcarstyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <title>Add New Car</title>
+
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">↩</a>
+    <div class="container">
+        <div class="left">
+            <div class="field">
+                <label>Car Model :</label>
+                <input type="text" placeholder="Eg:Tesla / Mercedes...">
+            </div>
+            <div class="field">
+                <label>Type :</label>
+                <input type="text" placeholder="Eg:SUV/Compact">
+            </div>
+            <div class="field">
+                <label>Transmission:</label>
+                <input type="text" placeholder="Eg:Manual/Automatic...">
+            </div>
+            <div class="field">
+                <label>Fuel Type:</label>
+                <input type="text" placeholder="Eg:Petrol/Electric...">
+            </div>
+            <div class="field">
+                <label>Air Conditioning:</label>
+                <input type="text" placeholder="Yes/No">
+            </div>
+            <div class="field">
+                <label>Fuel Policy :</label>
+                <input type="text" placeholder="Full-to-Full">
+            </div>
+            <div class="field">
+                <label>Mileage:</label>
+                <input type="text" placeholder="Eg:Unlimited/300Km/day...">
+            </div>
+            <div class="field">
+                <label>Luggage Space:</label>
+                <input type="text" placeholder="Eg:Fits 2 large suitcases...">
+            </div>
+            <div class="field">
+                <label>Drive:</label>
+                <input type="text" placeholder="Eg:Rear-Wheel/All-Wheel">
+            </div>
+        </div>
+        <div class="right">
+            <div class="upload-label">Upload Photo</div>
+            <img id="car-image-preview" src="360_F_565224180_QNRiRQkf9Fw0dKRoZGwUknmmfk51SuSS.jpg"
+                alt="Upload" />
+            <input type="file" id="car-image-upload" accept="image/*">
+            <div class="field">
+                <label>Enter Price /day:</label>
+                <input type="text" class="price-input" placeholder="Eg:150/day">
+            </div>
+            <button class="add-button" id="addCarBtn">ADD CAR</button>
+        </div>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('car-image-upload');
+        const imagePreview = document.getElementById('car-image-preview');
+        const addCarBtn = document.getElementById('addCarBtn');
+
+        imagePreview.addEventListener('click', () => imageInput.click());
+
+        imageInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    imagePreview.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        addCarBtn.addEventListener('click', () => {
+            alert("Car added successfully!");
+            window.location.href = "#"; // Replace with manager page link
+        });
+    </script>
+</body>
+
+</html>

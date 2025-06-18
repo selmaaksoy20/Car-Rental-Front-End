@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="addcostumerstyle.css" />
+</head>
+
+<body>
+  <div class="scale-wrapper"></div>
+  <div class="add-costumer">
+    <div class="overlap-wrapper">
+      <div class="overlap">
+        <form id="customerForm">
+          <div class="firstname">
+            <div class="overlap-group">
+              <input type="text" class="input-field" id="phone" name="phone" placeholder="PhoneNo." required>
+            </div>
+            <div class="div">Phone Number</div>
+            <div class="firstname-2">
+              <div class="overlap-group">
+                <input type="date" class="input-field" id="birthdate" name="birthdate" placeholder="Birthdate" required>
+              </div>
+              <div class="text-wrapper-2">Birth Date</div>
+            </div>
+          </div>
+          <div class="firstname-3">
+            <div class="overlap-group">
+              <input type="text" class="input-field" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="text-wrapper-2">Name</div>
+          </div>
+          <div class="firstname-4">
+            <div class="overlap-group">
+              <input type="email" class="input-field" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="text-wrapper-2">Email</div>
+          </div>
+          <div class="firstname-5">
+            <div class="overlap-group">
+              <input type="text" class="input-field" id="surname" name="surname" placeholder="Surname" required>
+            </div>
+            <div class="text-wrapper-2">Surname</div>
+          </div>
+          <img class="line" src="img/line-19.svg" />
+          <div class="text-wrapper-3">New Costumer Info:</div>
+          <button type="submit" class="div-wrapper">
+            <div class="text-wrapper-4">ADD</div>
+          </button>
+        </form>
+        <div class="overlap-2">
+          <a href="manager.html">
+            <img class="vector" src="back-button (1).png" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('customerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const customer = {
+        name: document.getElementById('name').value,
+        surname: document.getElementById('surname').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        birthdate: document.getElementById('birthdate').value
+      };
+
+      let customers = JSON.parse(localStorage.getItem('customers')) || [];
+      customers.push(customer);
+      localStorage.setItem('customers', JSON.stringify(customers));
+
+      window.location.href = 'manager.html';
+    });
+  </script>
+</body>
+
+</html>
